@@ -1,0 +1,6 @@
+services:
+  flask_whois:
+    build: .
+    ports:
+      - "8000:8000"
+    restart: always

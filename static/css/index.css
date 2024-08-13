@@ -1,0 +1,40 @@
+body {
+    background-color: #262626;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Style the form */
+form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Style the input fields */
+input[type="text"] {
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    background-color: #333;
+    color: #fff;
+}
+/* Style the submit button */
+#submit_button {
+    background-color: #A020F0; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#submit_button:hover {
+    background-color: #8216c5; 
+}
