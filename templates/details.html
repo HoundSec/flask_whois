@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block static_files%}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}">
+{% endblock%}
+
+
+{% block content%}
+    <section class="container">
+
+        <nav class="nav-container">
+
+            <h3><a class="houndsec" href="https://houndsec.net"><i>HoundSec</i></a></h3>
+
+            <div class="btn-home">
+                <a class="btn-primary" href="/">Home</a>
+            </div>
+        </nav>
+
+        <h2>Expires on: {{exp}}</h2>
+        <h4>RAW whois output:</h4>
+        <code>
+            {{code}}
+        </code>
+    </section>
+{% endblock%}

@@ -1,0 +1,255 @@
+@keyframes nav-animation{
+    from{
+        width: 100%;
+    }
+    to{
+        width: 75%;
+    }
+}
+
+
+body{
+    font-family: "Inter", sans-serif;
+    background-color: rgb(0,0,0);
+    color: white;
+    background-image: linear-gradient(to bottom, #141414, #222222, #141414);
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* style the banner section  */
+.container{
+    width: 100%;
+    height: 100vh;
+    border: 1px solid black;
+}
+
+/* style the header nav section  */
+.nav-container{
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 45px;
+    align-items: center;
+    animation: nav-animation 0.4s ease-out 0s 1  ;
+}
+
+.houndsec{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ff4327;
+}
+
+.btn-home{
+    border: 2px solid rgb(250, 43, 29);
+    border-radius: 8px;
+
+}
+.btn-primary{
+    color:#FFFFFF;
+    font-size: 1.3rem;
+    font-weight: 300;
+    padding: 10px 20px 10px 20px;
+    display: block;
+}
+
+/* style the main section  */
+.main-content{
+    width: 75%;
+    min-height: 200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 110px;
+
+}
+
+h2 {
+    font-size: 36px;
+    color: #dfe3de;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h4 {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.info h1{
+    font-size: 3rem;
+}
+
+.info h4{
+    color:  #eaedf0;
+    font-size: 1.5rem;
+    margin: 22px 0 35px 0;
+    font-family: miama;
+    font-style: italic;
+}
+
+code {
+    color: #222; 
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    width: 70%; 
+    border: 3px solid #ff4327; 
+    border-radius: 5px; /* Border radius for rounded corners */
+    background-color: #888888; /* Light grey background color */
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    white-space: pre-wrap; /* Preserve whitespace and wrap lines */
+}
+
+.eye{
+    color: #ff4327;
+    font-weight: bolder;
+}
+
+
+/* style the form  */
+
+.field{
+    width: 70%;
+    height: 85px;
+    margin: 0 auto;
+    text-align: left;
+
+    border: 1px solid #060606;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+
+}
+.inp1{
+    width: calc(100% - 70px - 40px);
+}
+#domain{
+    width: 100%;
+    background-color: #383737;
+    color: white;
+    border-radius: 5px 0 0 5px;
+    font-size: 1.02rem;
+    padding-left: 15px;
+    border: none;
+    height: 40px;
+}
+
+.inp2{
+    width: 70px;
+    height: 40px;
+}
+
+
+#sub-btn{
+    width: 100%;
+    height: 100%;
+    background-color:#fa3b1e ; 
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.1s ease-out ;
+}
+#sub-btn:hover{
+    transform: scale(1.03) translateX(2px);
+    background-color: #da4c00;
+    border-radius: 5px; 
+
+}
+
+
+/* responsive tablet devices */
+
+@media screen and (max-width:992px) {
+
+    .nav-container{
+        width: 80%;
+    }
+    .houndsec{
+        font-size: 1.8rem;
+       }
+       .btn-primary{
+        font-size: 1.25rem;
+       }
+
+
+    .main-content{
+        width: 90%;
+    }
+    .info h1{
+        font-size: 2.7rem;
+    }
+    .info h4{
+        font-size: 1.4rem;
+    }
+    .field{
+        width: 80%;
+        margin: 0 auto;
+    }
+    #domain{
+        font-size: 0.9rem;
+    }
+    #sub-btn{
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* responsive mobile devices  */
+
+@media screen and (max-width:576px) {
+
+    .nav-container{
+        width: 85%;
+        margin-top: 55px;
+    }
+   .houndsec{
+    font-size: 1.6rem;
+   }
+   .btn-primary{
+    font-size: 1.1rem;
+    padding: 8px 17px;
+   }
+    .main-content{
+        width: 90%;
+        margin-top: 130px;
+    }
+    .info h1{
+        font-size: 2.5rem;
+    }
+    .info h4{
+        font-size: 1.1rem;
+    }
+    .field{
+        width: 95%;
+        height: 70px;
+    }
+    #domain{
+        font-size: 0.8rem;
+        padding-left: 4px;
+    }
+    #sub-btn{
+        font-size: 0.8rem;
+    }
+    .inp2{
+        width: 60px;
+        height: 40px;
+    }
+    .inp1{
+        width: calc(100% - 60px - 25px);
+    }
+
+}
