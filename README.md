@@ -106,5 +106,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## About Me
 
-I’m Monazir Muhammad Doha. I am on a mission to bring his ideas to life.
+I am Monazir Muhammad Doha, on a mission to bring my ideas to life.
 Check my website [HoundSec](https://houndsec.net/)
