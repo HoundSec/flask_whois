@@ -1,5 +1,10 @@
 ### Flask_Whois
 
+![screely-1724513573716](https://github.com/user-attachments/assets/ffced920-f24e-417c-8737-b110ac185590)
+
+![screely-1724513599255](https://github.com/user-attachments/assets/7c4cab38-f3fb-4657-88b2-6fafdb41568c)
+
+
 # Flask_Whois
 
 Flask_Whois is a web application that allows you to look up domain names and IP addresses, providing detailed WHOIS information, including expiration dates and raw data.
