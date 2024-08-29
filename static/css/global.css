@@ -173,7 +173,9 @@ code {
 /* responsive tablet devices */
 
 @media screen and (max-width:992px) {
-
+	code{
+    	width: 80%; 
+	}
     .nav-container{
         width: 80%;
     }
@@ -211,6 +213,9 @@ code {
 /* responsive mobile devices  */
 
 @media screen and (max-width:576px) {
+	code{
+    	width: 90%; 
+	}
 
     .nav-container{
         width: 85%;
@@ -224,7 +229,7 @@ code {
     padding: 8px 17px;
    }
     .main-content{
-        width: 90%;
+        width: 95%;
         margin-top: 130px;
     }
     .info h1{
