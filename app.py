@@ -1,12 +1,11 @@
-from flask import Flask,request,render_template, send_from_directory
+from flask import Flask,request,render_template
 from whois import whois
-from datetime import datetime
 
 app = Flask(__name__)
 
 def format_date(date_obj):
-    if date_obj == None:
-        return "None"
+    if date_obj == None or isinstance(date_obj, str):
+        return date_obj
     def get_ordinal(n):
         suffix = "th" if 11 <= n % 100 <= 13 else {1: "st", 2: "nd", 3: "rd"}.get(n % 10, "th")
         return f"{n}{suffix}"
@@ -32,4 +31,4 @@ def lookup():
     return render_template("details.html", exp=format_date(result["expiration_date"]), code=result.text)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host="0.0.0.0")
