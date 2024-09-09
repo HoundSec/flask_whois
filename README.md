@@ -21,6 +21,7 @@ Flask_Whois is a web application that allows you to look up domain names and IP 
 - Python 3.x
 - Flask
 - Python `whois` package
+- **`whois` command installed** on the system for domain lookup (see below for Docker support)
 - Docker (for containerized deployment)
 
 ### Installation
@@ -45,6 +46,22 @@ Flask_Whois is a web application that allows you to look up domain names and IP 
    pip install -r requirements.txt
    ```
 
+4. **Ensure `whois` is installed (if you're not using docker)**
+
+   On Linux and macOS, you can install the `whois` command using your package manager.  
+   - **Linux (Debian-based)**:  
+     ```bash
+     sudo apt-get install whois
+     ```
+   - **macOS (with Homebrew)**:  
+     ```bash
+     brew install whois
+     ```
+
+   On **Windows**, you will need to install `whois` manually, such as from [Microsoft Sysinternals](https://learn.microsoft.com/en-us/sysinternals/downloads/whois).
+
+   **Note:** If the `whois` command is not available on your system, you can deploy and run the app using Docker.
+
 ### Usage
 
 1. **Run the application**
@@ -59,7 +76,7 @@ Flask_Whois is a web application that allows you to look up domain names and IP 
 
 ### Docker Support
 
-Flask_Whois can be deployed using Docker for ease of setup and scalability.
+Flask_Whois can be deployed using Docker, which comes pre-configured with the `whois` command to avoid system-specific installations.
 
 1. **Build the Docker image**
 
@@ -93,12 +110,17 @@ services:
 1. **Run the application with Docker Compose**
 
    ```bash
-   docker-compose up -d
+   docker-compose up -d --build
    ```
 
 2. **Access the app**
 
    Open your browser and navigate to `http://127.0.0.1:8000/`.
+
+### Important Notes
+
+- If you are not using Docker, ensure that the `whois` command is installed on your system to perform domain lookups.  
+- For a smoother setup, consider using Docker, which includes the `whois` command in the container.
 
 ### Contributing
 
