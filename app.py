@@ -33,9 +33,13 @@ def home():
 @app.route("/lookup",methods=["POST"]) # this end point is used by the form in the home page to post domain or IP-address
 def lookup():
     query = request.form["query"]
-    result = whois(query)
-    text_result = result.text
-    if result["domain_name"] is None:
+    try:
+        result = whois(query)
+        text_result = result.text
+        domain_name = result["domain_name"]
+    except:
+        domain_name = None
+    if domain_name is None:
         text_result = lookup_whois(query)
         expiry_date = "Not Available"
     else:
